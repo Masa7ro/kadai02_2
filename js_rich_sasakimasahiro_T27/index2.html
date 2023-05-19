@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JANKEN SURVIVOR</title>
+    <!-- jqueryを先に -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- jsを紐づける -->
+    <script src="js/janken.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="main-visual">
+            <img src="img/janken_top.jpg" alt="Top image">
+        </div>
+    </header>
+
+    <div class="content">
+        <h1 class="title">CHOOSE YOUR WARRIOR!!</h1>
+        <div>
+            <div>
+                <img class="characterimg img-click-effect" src="img/charaA.jpeg" onclick="playCharacterSound(); selectChar('GOO the illusion')">
+                <img class="characterimg img-click-effect" src="img/charaB.jpeg" onclick="playCharacterSound(); selectChar('CHOKI of destructive')">
+                <img class="characterimg img-click-effect" src="img/charaC.jpeg" onclick="playCharacterSound(); selectChar('Dangerous P')">
+                
+            </div>
+    
+
+            <div id="selectedCharacter">
+                <div id="selectedCharacterName"></div>
+                <img src="" alt="" id="selectedCharacterImg">
+            </div>
+            <div id="selectedChar"></div>
+        </div>
+
+        <h1 class="title">CHOOSE YOUR ENEMY!!</h1>
+        <div id="enemy">
+            <input type="image" class="image img-click-effect" src="img/enermyA.jpeg" alt="Demon Seed" onclick="playEnemySound(); rsp(0);">
+            <input type="image" class="image img-click-effect" src="img/enermyB.jpeg" alt="Dead Rampage" onclick="playEnemySound(); rsp(1);">
+            <input type="image" class="image img-click-effect" src="img/enermyC.jpeg" alt="Chaos Necromancer" onclick="playEnemySound(); rsp(2);">
+            
+        </div>
+
+        <div id="result-popup" style="display: none;">
+            <h2 id="result-message"></h2>
+            <img id="win-img" src="img/win_img.jpg" style="display: none;">
+            <img id="lose-img" src="img/lose_img.jpg" style="display: none;">
+            <div id="selectedCharacterNamePopup"></div>
+        </div>
+        
+        
+
+        <div id="playerselect"></div>
+        <div id="computerselect"></div>
+        <div id="resultMsg"></div>
+    </div>
+</body>
+
+</html>
